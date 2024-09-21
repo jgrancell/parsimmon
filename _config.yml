@@ -1,0 +1,76 @@
+# Site settings
+title: "Froggy's Whiteout Knowledgebase"
+description: "A strategy guide for Whiteout Survival mobile game."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourdomain.com" # the base hostname & protocol for your site
+theme: minima
+
+# Author settings (optional)
+author:
+  name: "Froggy"
+  email: "froggy@example.com"
+
+# Permalink settings for pretty URLs
+permalink: /:categories/:title/
+
+# Markdown options
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: 
+  parse_block_html: true
+
+# Pagination settings (optional)
+paginate: 5 # Posts per page
+paginate_path: "/page/:num/"
+
+# Directory settings
+source: .
+destination: ./_site
+
+# Plugins (Jekyll plugins you want to use)
+plugins:
+  - jekyll-paginate # For pagination
+
+# Build settings
+exclude: ["node_modules", "Gemfile", "Gemfile.lock", "vendor"] # Exclude unnecessary files from the build
+
+# Default settings for all posts and pages
+defaults:
+  - scope:
+      path: "" # empty string applies to all files
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Froggy"
+
+# Category-specific URLs (optional)
+collections:
+  events:
+    output: true
+    permalink: /events/:title/
+  heroes:
+    output: true
+    permalink: /heroes/:title/
+  news:
+    output: true
+    permalink: /news/:title/
+  other:
+    output: true
+    permalink: /other/:title/
+
+# Enable categories (Event Guides, Heroes, Other)
+categories: [events, heroes, news, other]
+
+# Timezone setting
+timezone: America/New_York
+
+# Social media links (optional)
+social:
+  twitter: "froggy_twitter"
+  github: "froggy_github"
+
+# Site logo (optional)
+logo: "/assets/banner.png"

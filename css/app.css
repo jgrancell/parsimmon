@@ -1,0 +1,25 @@
+header {
+    background-color: #b2cccc;
+    color: white;
+    text-align: center;
+    height: 200px; /* Limit header height to 200px */
+    overflow: hidden;
+}
+
+footer {
+  background-color: #b2cccc;
+  color: white;
+}
+
+header img {
+    height: auto; /* Make the image fill the header height */
+    object-fit: cover; /* Maintain aspect ratio and crop as needed */
+    object-position: 0 -150px; /* Start the image from -250px height */
+}
+
+
+.subtitle {
+  background-color: #b2cccc;
+  color: white;
+  text-align: center;
+}
