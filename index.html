@@ -9,7 +9,7 @@ title: "Home"
     <section class="recent-posts row">
         {% assign all_content = site.events | concat: site.heroes | concat: site.news %}
         {% assign sorted_content = all_content | sort: 'date' | reverse %}
-        {% for post in sorted_content limit:5 %}
+        {% for post in sorted_content limit:4 %}
         <div class="col-md-4 mb-4">
             <div class="card h-100">
                 <!-- Check if the post has an image -->
@@ -31,5 +31,11 @@ title: "Home"
             </div>
         </div>
         {% endfor %}
+    </section>
+
+    <hr>
+
+    <section class="getting-started my-5">
+        {{ site.guides | where: "title", "Getting Started" | first.content | markdownify }}
     </section>
 </main>

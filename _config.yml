@@ -48,6 +48,9 @@ defaults:
 
 # Category-specific URLs (optional)
 collections:
+  guides:
+    output: true
+    permalink: /guides/:title/
   events:
     output: true
     permalink: /events/:title/
