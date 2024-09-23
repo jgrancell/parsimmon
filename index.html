@@ -4,38 +4,40 @@ title: "Home"
 ---
 
 <main class="container my-5">
-    <h2>Recently Added Content</h2>
-
-    <section class="recent-posts row">
-        {% assign all_content = site.events | concat: site.heroes | concat: site.news %}
-        {% assign sorted_content = all_content | sort: 'date' | reverse %}
-        {% for post in sorted_content limit:4 %}
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <!-- Check if the post has an image -->
-                {% if post.image %}
-                <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" style="max-width: 400px; max-height: 200px; object-fit: cover; width: 100%;">
-                {% endif %}
-                
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h5>
-                    {% if post.synopsis %}
-                    <p class="card-text">{{ post.synopsis }}</p> <!-- Display the synopsis on the front page -->
-                    {% endif %}
-                </div>
-                <div class="card-footer">
-                    <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
-                </div>
-            </div>
+    <div class="row">
+        <!-- Left side: Getting Started guide (2/3 width) -->
+        <div class="col-md-8">
+            <section class="getting-started">
+                {{ site.guides | where: "title", "Getting Started" | first.content | markdownify }}
+            </section>
         </div>
-        {% endfor %}
-    </section>
 
-    <hr>
-
-    <section class="getting-started my-5">
-        {{ site.guides | where: "title", "Getting Started" | first.content | markdownify }}
-    </section>
+        <!-- Right side: Recently Added Content (1/3 width) -->
+        <div class="col-md-4">
+            <h2>Recently Added Content</h2>
+            <section class="recent-posts">
+                {% assign all_content = site.events | concat: site.heroes | concat: site.news %}
+                {% assign sorted_content = all_content | sort: 'date' | reverse %}
+                {% for post in sorted_content limit:4 %}
+                <div class="card mb-4">
+                    <!-- Check if the post has an image -->
+                    {% if post.image %}
+                    <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" style="max-width: 100%; max-height: 150px; object-fit: cover;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h5>
+                        {% if post.synopsis %}
+                        <p class="card-text">{{ post.synopsis }}</p> <!-- Display the synopsis on the front page -->
+                        {% endif %}
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
 </main>
