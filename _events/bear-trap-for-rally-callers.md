@@ -80,7 +80,7 @@ Natalia is not F2P. You need to be VIP5 to get her to at least 4 stars, at which
 | Swordmentor | 5%-25% attack increase. |
 {: .table .table-striped}
 
-Jeronimo is even less F2P than Natalia. You need to be VIP10 to get her to at least 4 stars, at which point you can get the two skills above to max. His gear has the same caveats as Natalia, so I won't repeat them.
+Jeronimo is even less F2P than Natalia. You need to be VIP10 to get him to at least 4 stars, at which point you can get the two skills above to max. His gear has the same caveats as Natalia, so I won't repeat them.
 
 NOTE: Like Natalia, Jeronimo has a passive skill called Natural Leader that increases Lethality of all troops by up to 15% even when not with them. So Jeronimo provides a better passive boost than Natalia, but at a much higher spend cost.
 {: .alert .alert-primary}
@@ -140,7 +140,7 @@ That being said, Alonso has exclusive gear that increases all troop Lethality by
 ## Rally Caller Checklist
 #### Heroes
 - If you aren't spending: use Flint, Molly, Zinman
-- If you are spending: Jeronimo is better than Molly is better than Flint.
+- If you are spending: Jeronimo is better than Natalia, Natalia is better than Flint.
 - Get your chosen heroes to at least 4*, and max their damage+lethality expedeition skills.
 
 #### Research
